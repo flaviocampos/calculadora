@@ -1,6 +1,5 @@
-<!-- eslint-disable vue/multi-word-component-names -->
 <template>
-    <button class="button" :class="{ double, triple, operation }">
+    <button class="button" @click="$emit('onCalcButtonClick', label)" :class="{ double, triple, operation }">
         {{ label }}
     </button>
 </template>
@@ -13,7 +12,6 @@ export default {
         double: { type: Boolean },
         triple: { type: Boolean }
     }
-
 }
 </script>
 
